@@ -1,15 +1,18 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devnovasoft — Demo Sitio Estático (4 pantallas)</title>
-  <meta name="description" content="Demo de sitio estático con 4 secciones: Inicio, Servicios, Portafolio y Contacto. Hecho por Devnovasoft." />
+  <meta name="description"
+    content="Demo de sitio estático con 4 secciones: Inicio, Servicios, Portafolio y Contacto. Hecho por Devnovasoft." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <!-- Header / Navegación -->
   <header class="site-header">
@@ -74,9 +77,15 @@
           <div class="mockup-body">
             <div class="mock-hero">Hero / Imagen</div>
             <div class="mock-grid">
-              <div class="mock-card"><strong>Bloque 1</strong><p>Texto de ejemplo.</p></div>
-              <div class="mock-card"><strong>Bloque 2</strong><p>Texto de ejemplo.</p></div>
-              <div class="mock-card"><strong>Bloque 3</strong><p>Texto de ejemplo.</p></div>
+              <div class="mock-card"><strong>Bloque 1</strong>
+                <p>Texto de ejemplo.</p>
+              </div>
+              <div class="mock-card"><strong>Bloque 2</strong>
+                <p>Texto de ejemplo.</p>
+              </div>
+              <div class="mock-card"><strong>Bloque 3</strong>
+                <p>Texto de ejemplo.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -87,7 +96,8 @@
     <section id="services" class="section" aria-labelledby="services-heading">
       <div class="container">
         <h2 id="services-heading" class="section-title">Servicios y paquetes</h2>
-        <p class="section-desc">Comienza con una landing y añade pantallas conforme las necesites. Todos los sitios incluyen diseño responsive y SEO básico.</p>
+        <p class="section-desc">Comienza con una landing y añade pantallas conforme las necesites. Todos los sitios
+          incluyen diseño responsive y SEO básico.</p>
 
         <div class="cards">
           <article class="card">
@@ -118,7 +128,8 @@
     <section id="portfolio" class="section" aria-labelledby="portfolio-heading">
       <div class="container">
         <h2 id="portfolio-heading" class="section-title">Portafolio (demo)</h2>
-        <p class="section-desc">Ejemplos ficticios para mostrar distribución y estilo. Reemplaza con tus proyectos reales.</p>
+        <p class="section-desc">Ejemplos ficticios para mostrar distribución y estilo. Reemplaza con tus proyectos
+          reales.</p>
 
         <div class="gallery">
           <figure class="gallery-item">
@@ -177,30 +188,48 @@
       <div class="container grid-2">
         <div>
           <h2 id="contact-heading" class="section-title">Hablemos de tu proyecto</h2>
-          <p class="section-desc">Cuéntame qué necesitas y te envío una propuesta. Incluye el número de pantallas que quieres y si ya tienes logo/textos.</p>
+          <p class="section-desc">Cuéntame qué necesitas y te envío una propuesta. Incluye el número de pantallas que
+            quieres y si ya tienes logo/textos.</p>
           <ul class="contact-list">
             <li>📧 contacto@devnovasoft.com</li>
             <li>📱 WhatsApp: +52 55 0000 0000</li>
             <li>🌐 @devnovasoft</li>
           </ul>
-          <p class="note">*Este es un demo de sitio estático. Las integraciones (formularios reales, analytics, etc.) se agregan al entregar.</p>
+          <p class="note">*Este es un demo de sitio estático. Las integraciones (formularios reales, analytics, etc.) se
+            agregan al entregar.</p>
         </div>
 
-        <form class="form" id="demoForm">
+        <form class="form" id="demoForm" name="contacto" netlify>
+          method="POST"
+          data-netlify="true" <!-- activa Netlify Forms -->
+          netlify-honeypot="bot-field"> <!-- honeypot antispam -->
+
+          <!-- Requerido si envías con fetch/AJAX -->
+          <input type="hidden" name="form-name" value="contacto">
+
+          <!-- Honeypot (oculto) -->
+          <p style="display:none">
+            <label>No llenar: <input name="bot-field" /></label>
+          </p>
+
           <label>
             <span>Nombre</span>
             <input type="text" name="name" placeholder="Tu nombre" required />
           </label>
+
           <label>
             <span>Email</span>
             <input type="email" name="email" placeholder="tu@correo.com" required />
           </label>
+
           <label>
             <span>Mensaje</span>
             <textarea name="message" rows="5" placeholder="Cuéntame sobre tu proyecto" required></textarea>
           </label>
-          <button type="submit" class="btn btn-primary full">Enviar (demo)</button>
+
+          <button type="submit" class="btn btn-primary full">Enviar</button>
         </form>
+
       </div>
     </section>
   </main>
@@ -217,4 +246,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>
