@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devnovasoft — Demo Sitio Estático (4 pantallas)</title>
+  <meta name="description" content="Demo de sitio estático con 4 secciones: Inicio, Servicios, Portafolio y Contacto. Hecho por Devnovasoft." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Navegación -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Ir al inicio">
+        <img src="logo.png" alt="Devnovasoft logo" class="brand-logo" />
+        <p>Devnovasoft</p>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <ul id="navMenu" class="nav-menu">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#portfolio">Portafolio</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Pantalla 1: INICIO -->
+    <section id="home" class="section hero" aria-labelledby="home-heading">
+      <div class="container grid-2">
+        <div>
+          <h1 id="home-heading" class="title">
+            Páginas web <span class="text-gradient">rápidas</span> que convierten
+          </h1>
+          <p class="lead">
+            Demostración de un sitio estático de 4 secciones. Ideal para usar como ejemplo con clientes:
+            diseño moderno, SEO on-page básico y excelente rendimiento.
+          </p>
+          <ul class="feature-list">
+            <li>Diseño responsive (móvil, tablet y desktop)</li>
+            <li>Optimización SEO básica</li>
+            <li>Dominio propio conectado</li>
+            <li>Entrega rápida</li>
+          </ul>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="#contact">Pide tu demo</a>
+            <a class="btn btn-outline" href="#services">Ver servicios</a>
+          </div>
+          <div class="badges">
+            <span>SSL</span>
+            <span>Performance</span>
+            <span>Accesible</span>
+          </div>
+        </div>
+
+        <div class="mockup">
+          <div class="browser-chrome">
+            <span class="dot red"></span>
+            <span class="dot amber"></span>
+            <span class="dot green"></span>
+            <span class="url">demo.devnovasoft</span>
+          </div>
+          <div class="mockup-body">
+            <div class="mock-hero">Hero / Imagen</div>
+            <div class="mock-grid">
+              <div class="mock-card"><strong>Bloque 1</strong><p>Texto de ejemplo.</p></div>
+              <div class="mock-card"><strong>Bloque 2</strong><p>Texto de ejemplo.</p></div>
+              <div class="mock-card"><strong>Bloque 3</strong><p>Texto de ejemplo.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pantalla 2: SERVICIOS -->
+    <section id="services" class="section" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 id="services-heading" class="section-title">Servicios y paquetes</h2>
+        <p class="section-desc">Comienza con una landing y añade pantallas conforme las necesites. Todos los sitios incluyen diseño responsive y SEO básico.</p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Landing Page (1 pantalla)</h3>
+            <p>Sección única con lo esencial para captar clientes.</p>
+            <div class="price">$2,300 MXN</div>
+            <button class="btn btn-primary">Solicitar</button>
+          </article>
+
+          <article class="card">
+            <h3>+2 Pantallas (promo)</h3>
+            <p>Amplía tu sitio con “Servicios” y “Contacto”.</p>
+            <div class="price">$1,000 MXN</div>
+            <button class="btn btn-primary">Solicitar</button>
+          </article>
+
+          <article class="card">
+            <h3>Pantalla adicional</h3>
+            <p>Agrega Nosotros, Portafolio, FAQ, etc.</p>
+            <div class="price">$800 MXN</div>
+            <button class="btn btn-primary">Solicitar</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pantalla 3: PORTAFOLIO -->
+    <section id="portfolio" class="section" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <h2 id="portfolio-heading" class="section-title">Portafolio (demo)</h2>
+        <p class="section-desc">Ejemplos ficticios para mostrar distribución y estilo. Reemplaza con tus proyectos reales.</p>
+
+        <div class="gallery">
+          <figure class="gallery-item">
+            <div class="gallery-thumb">Mockup</div>
+            <figcaption>
+              <strong>Café Aurora</strong>
+              <span>Landing 1 pantalla</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <div class="gallery-thumb">Mockup</div>
+            <figcaption>
+              <strong>Clínica Nova</strong>
+              <span>3 pantallas</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <div class="gallery-thumb">Mockup</div>
+            <figcaption>
+              <strong>Gym Strong</strong>
+              <span>5 pantallas</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <div class="gallery-thumb">Mockup</div>
+            <figcaption>
+              <strong>Inmobiliaria Sol</strong>
+              <span>4 pantallas</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <div class="gallery-thumb">Mockup</div>
+            <figcaption>
+              <strong>Consultora Alfa</strong>
+              <span>Landing + Blog estático</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <div class="gallery-thumb">Mockup</div>
+            <figcaption>
+              <strong>Restaurante Olivo</strong>
+              <span>Carta + Reservas (btn)</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pantalla 4: CONTACTO -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container grid-2">
+        <div>
+          <h2 id="contact-heading" class="section-title">Hablemos de tu proyecto</h2>
+          <p class="section-desc">Cuéntame qué necesitas y te envío una propuesta. Incluye el número de pantallas que quieres y si ya tienes logo/textos.</p>
+          <ul class="contact-list">
+            <li>📧 contacto@devnovasoft.com</li>
+            <li>📱 WhatsApp: +52 55 0000 0000</li>
+            <li>🌐 @devnovasoft</li>
+          </ul>
+          <p class="note">*Este es un demo de sitio estático. Las integraciones (formularios reales, analytics, etc.) se agregan al entregar.</p>
+        </div>
+
+        <form class="form" id="demoForm">
+          <label>
+            <span>Nombre</span>
+            <input type="text" name="name" placeholder="Tu nombre" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="tu@correo.com" required />
+          </label>
+          <label>
+            <span>Mensaje</span>
+            <textarea name="message" rows="5" placeholder="Cuéntame sobre tu proyecto" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary full">Enviar (demo)</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Devnovasoft. Demo de sitio estático.</p>
+      <nav aria-label="Legal">
+        <a href="#" class="footer-link">Términos</a>
+        <a href="#" class="footer-link">Privacidad</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
