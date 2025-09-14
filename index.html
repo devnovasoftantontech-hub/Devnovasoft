@@ -199,36 +199,41 @@
             agregan al entregar.</p>
         </div>
 
-        <form class="form" id="demoForm" name="contacto" netlify>
-          method="POST"
-          data-netlify="true" <!-- activa Netlify Forms -->
-          netlify-honeypot="bot-field"> <!-- honeypot antispam -->
+        <form
+  class="form"
+  id="demoForm"
+  name="contacto"                 netlify
+  method="POST"
+  data-netlify="true"             
+  netlify-honeypot="bot-field"   
+  action="/gracias.html"        
+>
+  <!-- Requerido si usas AJAX o action personalizado -->
+  <input type="hidden" name="form-name" value="contacto" />
 
-          <!-- Requerido si envías con fetch/AJAX -->
-          <input type="hidden" name="form-name" value="contacto">
+  <!-- Honeypot oculto -->
+  <p style="display:none" aria-hidden="true">
+    <label>No llenar: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+  </p>
 
-          <!-- Honeypot (oculto) -->
-          <p style="display:none">
-            <label>No llenar: <input name="bot-field" /></label>
-          </p>
+  <label>
+    <span>Nombre</span>
+    <input type="text" name="name" placeholder="Tu nombre" required />
+  </label>
 
-          <label>
-            <span>Nombre</span>
-            <input type="text" name="name" placeholder="Tu nombre" required />
-          </label>
+  <label>
+    <span>Email</span>
+    <input type="email" name="email" placeholder="tu@correo.com" required />
+  </label>
 
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" placeholder="tu@correo.com" required />
-          </label>
+  <label>
+    <span>Mensaje</span>
+    <textarea name="message" rows="5" placeholder="Cuéntame sobre tu proyecto" required></textarea>
+  </label>
 
-          <label>
-            <span>Mensaje</span>
-            <textarea name="message" rows="5" placeholder="Cuéntame sobre tu proyecto" required></textarea>
-          </label>
+  <button type="submit" class="btn btn-primary full">Enviar</button>
+</form>
 
-          <button type="submit" class="btn btn-primary full">Enviar</button>
-        </form>
 
       </div>
     </section>
